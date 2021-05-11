@@ -9,6 +9,7 @@
 5. Volg de stappen van het maken van een request om de data over België op te halen
 
 ## Vraag 2: Maak op basis van de response de volgende string en log dit in de console: [country-naam] is situated in [subarea-name]. It has a population of [amount] people.
+
 1. Check in de console hoe jouw data eruit ziet (is het een array? Is het een object?)
 2. Probeer eerst even alle data die je nodig hebt apart in de console te loggen.
 3. Voeg alle data samen tot één string en sla die op in een variabele

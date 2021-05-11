@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column-reverse;
+}
+
+#infoHolder {
+    min-width: 800px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+background-size: cover;
+    background:  url("https://upload.wikimedia.org/wikipedia/commons/6/65/Flag_of_Belgium.svg") center no-repeat;
+}
+
+h1 {
+    font-family: sans-serif;
+}
