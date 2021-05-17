@@ -4,8 +4,9 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    flex-direction: column-reverse;
+    flex-direction: column;
     font-family: sans-serif;
+
 }
 
 
@@ -47,9 +48,9 @@ p {
 
 #textContainer {
     width: 60%;
-    padding: 30px;
+    padding: 30px 40px;
     border-radius:  0 8px 8px 0 ;
-    background: #F8EDEB;
+    background: #FEC5BB;
 }
 
 #countryFlag {
@@ -60,14 +61,26 @@ p {
 
 
 button {
-    border-radius: 50px;
-    border: none;
     padding: 1em;
     background: #FEC89A;
     color: #fff;
     cursor: pointer;
+    font-size: 14px;
+    float: left;
+    border: 1px solid #FEC89A;
+    border-radius: 0 30px 30px 0;
 }
 
 button:hover {
-    background:#d89d6a;
+    background: #d89d6a;
+    border: 1px solid #d89d6a;
+}
+
+.searchField input {
+    padding: 1em;
+    font-size: 14px;
+    border: 1px solid #FEC89A;
+    float: left;
+    border-radius: 30px 0 0 30px;
+    outline: none;
 }

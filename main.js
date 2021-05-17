@@ -10,7 +10,6 @@ async  function searchCountry() {
         const subRegion = result.data[0].subregion;
         const population = result.data[0].population;
         const capital = result.data[0].capital;
-
         document.getElementById('infoHolder').style.display = 'flex';
 
         // set flag img
@@ -29,6 +28,8 @@ async  function searchCountry() {
         console.log('you still suck');
     }
 }
+
+
 
 
 // Get container
