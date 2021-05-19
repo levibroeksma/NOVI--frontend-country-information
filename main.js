@@ -6,6 +6,20 @@ const searchField = document.getElementById('search').addEventListener('keydown'
     }
 });
 
+function removeChildren() {
+    const removeFlag = document.getElementById('flagHolder');
+    const removeHeader = document.getElementById('header');
+    const removeDescription = document.getElementById('description');
+    const removeCapitalCurrency = document.getElementById('capital-Currency');
+    const removeLanguages = document.getElementById('languages');
+
+    removeHeader.innerHTML = '';
+    removeFlag.innerHTML = '';
+    removeDescription.innerHTML = '';
+    removeCapitalCurrency.innerHTML = '';
+    removeLanguages.innerHTML = '';
+}
+
 function getUserInput() {
     let str = document.getElementById('search').value;
     return str;
@@ -20,6 +34,8 @@ async  function searchCountry() {
         const capital = result.data[0].capital;
         document.getElementById('infoHolder').style.display = 'flex';
 
+        // empty container first:
+        removeChildren();
         // set flag img
         createFlag(result);
         // create H1
@@ -32,7 +48,9 @@ async  function searchCountry() {
         languagesSpoken.textContent = languages(result);
     }
     catch (e) {
-        alert('Too bad, you made a typo or this is not a real country, please try again.')
+        removeChildren();
+        innerTitle.textContent = 'Too bad!'
+        descriptionCountry.textContent = 'You made a typo or this country doesn\'t exist, please try again';
     }
 }
 
@@ -65,10 +83,10 @@ const descriptionCountry = document.getElementById('description');
 
 // Country capital and currency
 const capitalAndCurrency = document.createElement('p');
-capitalAndCurrency.setAttribute('id', 'Capital-Currency');
+capitalAndCurrency.setAttribute('id', 'capital-Currency');
 textContainer.appendChild(capitalAndCurrency);
 
-const capitalCurrency = document.getElementById('Capital-Currency');
+const capitalCurrency = document.getElementById('capital-Currency');
 
 // Spoken languages
 const spokenLanguages = document.createElement('p');
